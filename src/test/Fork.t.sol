@@ -11,10 +11,16 @@ contract ForkTest is DSTest {
     Vm public vm = Vm(HEVM_ADDRESS);
     address EOA = 0x108F0eC0D7F05490b7Fa284de5F1D4b1dfb64Dbf;
     address uniswapV3Router = 0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45;
+    address weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    address token = 0xF1cA9cb74685755965c7458528A36934Df52A3EF;
+    address pool = 0x27a9ff745cf1Dd366d94267Cb4aDE2350588a187;
 
     function setUp() public {
         vm.label(EOA, "EOA");
         vm.label(uniswapV3Router, "uniswapV3Router");
+        vm.label(weth, "weth");
+        vm.label(token, "token");
+        vm.label(pool, "pool");
     }
     function test_Reply() public {
         vm.startPrank(EOA);
