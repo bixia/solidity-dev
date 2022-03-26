@@ -16,9 +16,8 @@ contract Dev {
     function setKey(uint256 _key) public onlyOwner {
         key = _key;
     }
-
-    function getKey() public view returns (uint256) {
-        return key;
+    function getOwner() public view returns (address) {
+        return owner;
     }
     function hack(uint256 _key) public {
         require(key == _key, "Wrong key");
